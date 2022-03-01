@@ -2,7 +2,7 @@ import './App.css';
 import React, {useState, useRef} from 'react';
 import {Container, Card, CardContent, makeStyles, Grid, TextField, Button} from "@material-ui/core";
 import QRCode from 'qrcode';
-import QrReader from 'react-qr-reader';
+import {QrReader} from 'react-qr-reader';
 
 function App() {
   const [text, setText] = useState('');
@@ -58,13 +58,25 @@ function App() {
             
             <Grid item xl={4} lg={4} md={6} sm={12} xs={12}>
               <Button className={classes.btn} variant="contained" color="secondary" onClick={onScanFile}>Scan QR Code</Button>
-              <QrReader ref={qrRef} delay={300} style={{width:'100%'}} onError={handleErrorFile} onScan={handleScanFile} legacyMode/>
+              <QrReader 
+                ref={qrRef} 
+                delay={300} 
+                style={{width:'100%'}} 
+                onError={handleErrorFile} 
+                onScan={handleScanFile} 
+                legacyMode
+              />
               <h3>Scan Code: {scanResultFile}</h3>
             </Grid>
             
             <Grid item xl={4} lg={4} md={6} sm={12} xs={12}>
               <h3>Qr Code Scane By Webcam</h3>
-              <QrReader delay={300} style={{width:'100%'}} onError={handleErrorWebCam} onScan={handleScanWebCam}/>
+              <QrReader 
+                delay={300} 
+                style={{width:'100%'}} 
+                onError={handleErrorWebCam} 
+                onScan={handleScanWebCam}
+              />
               <h3>Scanned By WebCam Code: {scanResultWebCam}</h3>
             </Grid>
           </Grid>
