@@ -9,6 +9,7 @@ Instructor: Heart Of Programming
 Information: 
 
 - [Youtube](https://www.youtube.com/channel/UC3FKpg17P8KElEgsnyglToQ)
+- [Tutorial](https://www.youtube.com/watch?v=7Ntot5ClGIY)
 
 # Description of Project
 - Make your own Product's QR Code
